@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :pong, only: [:index]
+
+  get 'watson' => 'home#watson'
+  get 'hal' => 'home#hal'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
