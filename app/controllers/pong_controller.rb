@@ -17,11 +17,11 @@ class PongController < ApplicationController
     hal = Team.find_by(name: "hal")
 
     response = {
-      "frames": [
+      "frames" => [
         {
-          "index": 0,
-          "text": "#{watson.current_score} - #{hal.current_score}",
-          "icon": "a917"
+          "index" => 0,
+          "text" => "#{watson.current_score} - #{hal.current_score}",
+          "icon" => "a917"
         }
       ]
     }
