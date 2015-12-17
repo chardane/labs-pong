@@ -28,6 +28,10 @@ class PongController < ApplicationController
     render json: response
   end
 
+  def reset
+    Team.update_all(current_score: 0)
+  end
+
   private
 
   def pong_params

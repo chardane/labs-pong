@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   get 'watson' => 'home#watson'
   get 'hal' => 'home#hal'
-  get 'scoreboard' => 'pong#lametric_scoreboard' 
+  get 'scoreboard' => 'pong#lametric_scoreboard'
+  get 'reset' => 'pong#reset'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
