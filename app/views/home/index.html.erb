@@ -27,10 +27,64 @@
       .score {
         font-weight: 800;
         font-size: 100px;
+        animation-duration: 0.7s;
+        animation-name: popgrow;
+        animation-delay: 1s;
       }
+
+#left {
+  position: absolute;
+  width: 63%;
+  height: 750px;
+  background-color: #8C2934;
+  transform: skew(10deg,0);
+  left: -10%;
+  top: -10px;
+  animation-duration: 0.7s;
+  animation-name: slideup;
+  z-index: -100;
+}
+
+#right {
+  position: absolute;
+  width: 67%;
+  height: 750px;
+  background-color: #364256;
+  transform: skew(10deg,0);
+  right: -20%;
+  top: 0px;
+  animation-duration: 0.7s;
+  animation-name: slidedown;
+  z-index: -100;
+}
+
+@keyframes slideup {
+  from {
+    margin-top: 100%;
+    left: 10%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    margin-top: -100%;
+    margin-right: 20%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
 
 </style>
 <h1 align="center">Labs Pong!</h1>
+<div id="left"></div>
+<div id="right"></div>
+
 <section id="team-watson">
   <div class="team-name">Team Watson</div>
   <div class="score"></div>
