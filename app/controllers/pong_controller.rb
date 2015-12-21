@@ -9,6 +9,8 @@ class PongController < ApplicationController
       team.minus_point!
     end
 
+    LaMetricService.push
+
     render json: {name: team.name, score: team.current_score}
   end
 
